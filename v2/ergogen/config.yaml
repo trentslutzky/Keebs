@@ -2,75 +2,66 @@ points:
   zones:
     matrix:
       columns:
-        outer:
+        outer1:
           rows:
-            bottom:
-              row_net: P3
-              column_net: P4
-              diode_net: D1
-              bind: [0, 0, 0, 0]
-              tags: 
-                1u: true
-                15u: false
-            lower:
-              row_net: P2
+            upper:
+              row_net: P0
               column_net: P4
               diode_net: D2
               tags: 
                 1u: true
                 15u: false
             home:
-              row_net: P0
+              row_net: P1
               column_net: P4
               diode_net: D3
               tags: 
                 1u: true
                 15u: false
-            upper:
-              row_net: P1
+            lower:
+              row_net: P2
               column_net: P4
               diode_net: D4
               tags: 
                 1u: true
                 15u: false
-        pinky:
+        outer:
           spread: 18
-          stagger: 0.5
           rows:
-            bottom:
-              row_net: P3
+            upper:
+              row_net: P0
               column_net: P5
               diode_net: D5
+              tags: 
+                1u: true
+                15u: false
+            home:
+              row_net: P1
+              column_net: P5
+              diode_net: D6
               tags: 
                 1u: true
                 15u: false
             lower:
               row_net: P2
               column_net: P5
-              diode_net: D6
-              tags: 
-                1u: true
-                15u: false
-            home:
-              row_net: P0
-              column_net: P5
               diode_net: D7
               tags: 
                 1u: true
                 15u: false
+        pinky:
+          spread: 18
+          stagger: 2
+          rows:
             upper:
-              row_net: P1
-              column_net: P5
+              row_net: P0
+              column_net: P6
               diode_net: D8
               tags: 
                 1u: true
                 15u: false
-        ring:
-          spread: 18
-          stagger: 2
-          rows:
-            bottom:
-              row_net: P3
+            home:
+              row_net: P1
               column_net: P6
               diode_net: D9
               tags: 
@@ -83,17 +74,28 @@ points:
               tags: 
                 1u: true
                 15u: false
-            home:
+        ring:
+          spread: 18
+          stagger: 2
+          rows:
+            upper:
               row_net: P0
-              column_net: P6
+              column_net: P7
               diode_net: D11
               tags: 
                 1u: true
                 15u: false
-            upper:
+            home:
               row_net: P1
-              column_net: P6
+              column_net: P7
               diode_net: D12
+              tags: 
+                1u: true
+                15u: false
+            lower:
+              row_net: P2
+              column_net: P7
+              diode_net: D13
               tags: 
                 1u: true
                 15u: false
@@ -101,30 +103,23 @@ points:
           spread: 18
           stagger: 1
           rows:
-            bottom:
-              row_net: P3
-              column_net: P7
-              diode_net: D13
-              tags: 
-                1u: true
-                15u: false
-            lower:
-              row_net: P2
-              column_net: P7
+            upper:
+              row_net: P0
+              column_net: P8
               diode_net: D14
               tags: 
                 1u: true
                 15u: false
             home:
-              row_net: P0
-              column_net: P7
+              row_net: P1
+              column_net: P8
               diode_net: D15
               tags: 
                 1u: true
                 15u: false
-            upper:
-              row_net: P1
-              column_net: P7
+            lower:
+              row_net: P2
+              column_net: P8
               diode_net: D16
               bind: [0, 56, 0, 0]
               tags: 
@@ -134,81 +129,61 @@ points:
           spread: 18
           stagger: -2
           rows:
-            bottom:
-              row_net: P3
-              column_net: P8
+            upper:
+              row_net: P0
+              column_net: P9
               diode_net: D17
               tags: 
                 1u: true
                 15u: false
-              shift: [3, -3.4]
-              rotate: -16
-            lower:
-              row_net: P2
-              column_net: P8
+            home:
+              row_net: P1
+              column_net: P9
               diode_net: D18
               tags: 
                 1u: true
                 15u: false
-            home:
-              row_net: P0
-              column_net: P8
+            lower:
+              row_net: P2
+              column_net: P9
               diode_net: D19
-              tags: 
-                1u: true
-                15u: false
-            upper:
-              row_net: P1
-              column_net: P8
-              diode_net: D20
               tags: 
                 1u: true
                 15u: false
         inner:
           spread: 18
-          stagger: 16
+          stagger: -1
           rows:
-            bottom:
-              row_net: P2
-              column_net: P9
-              diode_net: D21
-              bind: [0, 25, 10, 0]
-              tags: 
-                1u: true
-                15u: false
-            lower:
+            upper:
               row_net: P0
-              column_net: P9
-              diode_net: D22
+              column_net: P10
+              diode_net: D20
               bind: [0, 25, 0, 0]
               tags: 
                 1u: true
                 15u: false
             home:
               row_net: P1
-              column_net: P9
-              diode_net: D23
+              column_net: P10
+              diode_net: D21
+              bind: [3, 25, 0, 0]
+              tags: 
+                1u: true
+                15u: false
+            lower:
+              row_net: P2
+              column_net: P10
+              diode_net: D22
               bind: [3, 25, 0, 0]
               tags: 
                 1u: true
                 15u: false
       rows:
-        bottom.padding: 17
         lower.padding: 17
         home.padding: 17
+        upper.padding: 17
       key:
         footprints:
-          choc_normal:
-            type: choc
-            nets:
-              from: =row_net
-              to: =diode_net
-            anchor:
-              rotate: 180
-            params:
-                keycaps: true
-                reverse: true
-                hotswap: false
           choc_hotswap:
             type: choc
             nets:
@@ -234,11 +209,11 @@ points:
               shift: [8.0,-5.5]
     thumb:
       anchor:
-        ref: matrix_inner_bottom
-        shift: [6,-28]
+        ref: matrix_inner_lower
+        shift: [6,-30]
       columns:
         first: 
-          rotate: -26
+          rotate: -24
           stagger: 2
           rows:
             bottom:
@@ -247,33 +222,37 @@ points:
               rotate: 90
               skip: false
               row_net: P3
-              column_net: P9
-              diode_net: D24
+              column_net: P6
+              diode_net: D23
               bind: [30, 10, 20, 0]
               tags: 
                 15u: true
         second:
-          spread: 18.5
-          stagger: -8
+          spread: 20
+          stagger: -5.2
+          rotate: -4
           rows:
             bottom:
-              row_net: P0
-              column_net: P10
-              diode_net: D25
+              row_net: P3
+              column_net: P8
+              diode_net: D24
+              spacing: 2
+              shift: [0,2]
               tags: 
                 1u: true
                 15u: false
             top:
-              row_net: P2
-              column_net: P10
-              diode_net: D26
+              row_net: P3
+              column_net: P7
+              diode_net: D25
               tags: 
                 1u: true
                 15u: false
               bind: [0, 0, 0.5, 60]
         third:
-          spread: 18.5
-          stagger: 5
+          spread: 20.5
+          stagger: 4
+          rotate: -5
           rows:
             bottom:
               skip: true
@@ -281,8 +260,8 @@ points:
               rotate: 90
               skip: false
               row_net: P3
-              column_net: P10
-              diode_net: D27
+              column_net: P9
+              diode_net: D26
               bind: [1, 5, 0, 5]
               tags: 
                 15u: true
@@ -290,17 +269,6 @@ points:
         top.padding: 18
       key:
         footprints:
-          choc_normal:
-            type: choc
-            nets:
-              from: =row_net
-              to: =diode_net
-            anchor:
-              rotate: 180
-            params:
-                keycaps: true
-                reverse: true
-                hotswap: false
           choc_hotswap:
             type: choc
             nets:
@@ -326,13 +294,13 @@ points:
               shift: [8.0,-5.5]
     ext_thumb:
       anchor: 
-        ref: matrix_inner_bottom
-        shift: [18,-2]
+        ref: matrix_inner_lower
+        shift: [18,-1]
       columns:
         only:
           rows:
             only:
-              row_net: P1
+              row_net: P3
               diode_net: D27
               column_net: P10
               bind: [0, 1, 10, 0]
@@ -341,17 +309,59 @@ points:
                 15u: false
       key:
         footprints:
-          choc_normal:
+          choc_hotswap:
             type: choc
             nets:
               from: =row_net
               to: =diode_net
-            anchor:
-              rotate: 180
             params:
                 keycaps: true
                 reverse: true
-                hotswap: false
+                hotswap: true
+          diode:
+            type: diode
+            nets:
+              from: =diode_net
+              to: =column_net
+            anchor:
+              shift: [6.0,-7.0]
+              rotate: 180
+          diode_via: 
+            type: via
+            nets:
+              net: =column_net
+            anchor:
+              shift: [8.0,-5.5]
+    ext_thumb_lower:
+      anchor: 
+        ref: matrix_middle_lower
+        shift: [-2,-25]
+      columns:
+        left:
+          rows:
+            only:
+              rotate: -4
+              row_net: P3
+              column_net: P4
+              diode_net: D28
+              bind: [0, 1, 10, 0]
+              tags: 
+                1u: true
+                15u: false
+        right:
+          rows:
+            only:
+              rotate: -13.5
+              shift: [2.5,-3.4]
+              row_net: P3
+              column_net: P5
+              diode_net: D29
+              bind: [0, 1, 10, 0]
+              tags: 
+                1u: true
+                15u: false
+      key:
+        footprints:
           choc_hotswap:
             type: choc
             nets:
@@ -377,14 +387,6 @@ points:
               shift: [8.0,-5.5]
 outlines:
   exports:
-    raw:
-      - type: keys
-        side: left
-        size: [cx,cy]
-    panel:
-      - type: outline
-        name: raw
-        fillet: 0
     keys1:
       - type: keys
         side: left
@@ -398,11 +400,9 @@ outlines:
         size: [1.5cx-0.5, cy-0.5]
         bound: false
 pcbs:
-  esper:
+  flutter_v2_wren:
     outlines:
       main:
-        outline: panel
-      caps:
         outline: keys1
         layer: Eco1.User
       caps15:
@@ -412,8 +412,8 @@ pcbs:
       promicro:
         type: promicro_pretty
         anchor:
-          ref: matrix_inner_home
-          shift: [20, -7.25]
+          ref: matrix_inner_upper
+          shift: [21, -5.25]
           rotate: -90
         params:
           orientation: down
@@ -423,9 +423,9 @@ pcbs:
             r1: RST
             r2: GND
           anchor:
-            ref: matrix_inner_home
-            shift: [31,2.5]
-            rotate: -90
+            ref: matrix_inner_upper
+            shift: [8,10]
+            rotate: 0
       power_switch:
           type: pcm12
           nets:
@@ -433,7 +433,7 @@ pcbs:
             to: RAW
           anchor:
             ref: ext_thumb_only_only
-            shift: [13.5,0]
+            shift: [15.5,-5.5]
             rotate: 90
           params:
             reverse: true
@@ -444,4 +444,4 @@ pcbs:
             neg: GND
           anchor:
             ref: ext_thumb_only_only
-            shift: [-7.0,11]
+            shift: [-4,10]
