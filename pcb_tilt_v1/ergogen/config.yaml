@@ -1,0 +1,447 @@
+points:
+  zones:
+    matrix:
+      anchor:
+        rotate: 2
+      columns:
+        outer:
+          rows:
+            bottom:
+              skip: true
+              row_net: P3
+              column_net: P4
+              diode_net: D1
+              bind: [0, 0, 0, 0]
+              tags: 
+                1u: true
+                15u: false
+            lower:
+              row_net: P2
+              column_net: P4
+              diode_net: D2
+              tags: 
+                1u: true
+                15u: false
+            home:
+              row_net: P0
+              column_net: P4
+              diode_net: D3
+              tags: 
+                1u: true
+                15u: false
+            upper:
+              row_net: P1
+              column_net: P4
+              diode_net: D4
+              tags: 
+                1u: true
+                15u: false
+        pinky:
+          rotate: 0
+          spread: 18
+          stagger: 0.5
+          rows:
+            bottom:
+              skip: true
+              row_net: P3
+              column_net: P5
+              diode_net: D5
+              tags: 
+                1u: true
+                15u: false
+            lower:
+              row_net: P2
+              column_net: P5
+              diode_net: D6
+              tags: 
+                1u: true
+                15u: false
+            home:
+              row_net: P0
+              column_net: P5
+              diode_net: D7
+              tags: 
+                1u: true
+                15u: false
+            upper:
+              row_net: P1
+              column_net: P5
+              diode_net: D8
+              tags: 
+                1u: true
+                15u: false
+        ring:
+          rotate: -2
+          spread: 18
+          stagger: 3
+          rows:
+            bottom:
+              skip: true
+              row_net: P3
+              column_net: P6
+              diode_net: D9
+              tags: 
+                1u: true
+                15u: false
+            lower:
+              row_net: P2
+              column_net: P6
+              diode_net: D10
+              tags: 
+                1u: true
+                15u: false
+            home:
+              row_net: P0
+              column_net: P6
+              diode_net: D11
+              tags: 
+                1u: true
+                15u: false
+            upper:
+              row_net: P1
+              column_net: P6
+              diode_net: D12
+              tags: 
+                1u: true
+                15u: false
+        middle:
+          rotate: -1
+          spread: 18.1
+          stagger: 2
+          rows:
+            bottom:
+              row_net: P3
+              column_net: P7
+              diode_net: D13
+              shift: [0,-2.5]
+              tags: 
+                1u: true
+                15u: false
+            lower:
+              row_net: P2
+              column_net: P7
+              diode_net: D14
+              tags: 
+                1u: true
+                15u: false
+            home:
+              row_net: P0
+              column_net: P7
+              diode_net: D15
+              tags: 
+                1u: true
+                15u: false
+            upper:
+              row_net: P1
+              column_net: P7
+              diode_net: D16
+              bind: [0, 56, 0, 0]
+              tags: 
+                1u: true
+                15u: false
+        point:
+          spread: 18
+          stagger: -2
+          rows:
+            bottom:
+              row_net: P3
+              column_net: P8
+              diode_net: D17
+              tags: 
+                1u: true
+                15u: false
+              shift: [3, -3.4]
+              rotate: -16
+            lower:
+              row_net: P2
+              column_net: P8
+              diode_net: D18
+              tags: 
+                1u: true
+                15u: false
+            home:
+              row_net: P0
+              column_net: P8
+              diode_net: D19
+              tags: 
+                1u: true
+                15u: false
+            upper:
+              row_net: P1
+              column_net: P8
+              diode_net: D20
+              tags: 
+                1u: true
+                15u: false
+        inner:
+          spread: 18
+          stagger: 16
+          rows:
+            bottom:
+              row_net: P2
+              column_net: P9
+              diode_net: D21
+              bind: [0, 25, 10, 0]
+              tags: 
+                1u: true
+                15u: false
+            lower:
+              row_net: P0
+              column_net: P9
+              diode_net: D22
+              bind: [0, 25, 0, 0]
+              tags: 
+                1u: true
+                15u: false
+            home:
+              row_net: P1
+              column_net: P9
+              diode_net: D23
+              bind: [3, 25, 0, 0]
+              tags: 
+                1u: true
+                15u: false
+      rows:
+        bottom.padding: 17
+        lower.padding: 17
+        home.padding: 17
+      key:
+        footprints:
+          choc_normal:
+            type: choc
+            nets:
+              from: =row_net
+              to: =diode_net
+            anchor:
+              rotate: 180
+            params:
+                keycaps: true
+                reverse: true
+                hotswap: false
+          choc_hotswap:
+            type: choc
+            nets:
+              from: =row_net
+              to: =diode_net
+            params:
+                keycaps: true
+                reverse: true
+                hotswap: true
+          diode:
+            type: diode
+            nets:
+              from: =diode_net
+              to: =column_net
+            anchor:
+              shift: [6.0,-7.0]
+              rotate: 180
+          diode_via: 
+            type: via
+            nets:
+              net: =column_net
+            anchor:
+              shift: [8.0,-5.5]
+    thumb:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [6,-28]
+      columns:
+        first: 
+          rotate: -26
+          stagger: 2
+          rows:
+            bottom:
+              skip: true
+            top:
+              rotate: 90
+              skip: false
+              row_net: P3
+              column_net: P9
+              diode_net: D24
+              bind: [30, 10, 20, 0]
+              tags: 
+                15u: true
+        second:
+          spread: 18.5
+          stagger: -8
+          rows:
+            bottom:
+              row_net: P0
+              column_net: P10
+              diode_net: D25
+              tags: 
+                1u: true
+                15u: false
+            top:
+              row_net: P2
+              column_net: P10
+              diode_net: D26
+              tags: 
+                1u: true
+                15u: false
+              bind: [0, 0, 0.5, 60]
+        third:
+          spread: 18.5
+          stagger: 5
+          rows:
+            bottom:
+              skip: true
+            top:
+              rotate: 90
+              skip: false
+              row_net: P3
+              column_net: P10
+              diode_net: D27
+              bind: [1, 5, 0, 5]
+              tags: 
+                15u: true
+      rows:
+        top.padding: 18
+      key:
+        footprints:
+          choc_normal:
+            type: choc
+            nets:
+              from: =row_net
+              to: =diode_net
+            anchor:
+              rotate: 180
+            params:
+                keycaps: true
+                reverse: true
+                hotswap: false
+          choc_hotswap:
+            type: choc
+            nets:
+              from: =row_net
+              to: =diode_net
+            params:
+                keycaps: true
+                reverse: true
+                hotswap: true
+          diode:
+            type: diode
+            nets:
+              from: =diode_net
+              to: =column_net
+            anchor:
+              shift: [6.0,-7.0]
+              rotate: 180
+          diode_via: 
+            type: via
+            nets:
+              net: =column_net
+            anchor:
+              shift: [8.0,-5.5]
+    ext_thumb:
+      anchor: 
+        ref: matrix_inner_bottom
+        shift: [18,-2]
+      columns:
+        only:
+          rows:
+            only:
+              row_net: P1
+              diode_net: D27
+              column_net: P10
+              bind: [0, 1, 10, 0]
+              tags: 
+                1u: true
+                15u: false
+      key:
+        footprints:
+          choc_normal:
+            type: choc
+            nets:
+              from: =row_net
+              to: =diode_net
+            anchor:
+              rotate: 180
+            params:
+                keycaps: true
+                reverse: true
+                hotswap: false
+          choc_hotswap:
+            type: choc
+            nets:
+              from: =row_net
+              to: =diode_net
+            params:
+                keycaps: true
+                reverse: true
+                hotswap: true
+          diode:
+            type: diode
+            nets:
+              from: =diode_net
+              to: =column_net
+            anchor:
+              shift: [6.0,-7.0]
+              rotate: 180
+          diode_via: 
+            type: via
+            nets:
+              net: =column_net
+            anchor:
+              shift: [8.0,-5.5]
+outlines:
+  exports:
+    raw:
+      - type: keys
+        side: left
+        size: [cx,cy]
+    panel:
+      - type: outline
+        name: raw
+        fillet: 0
+    keys1:
+      - type: keys
+        side: left
+        tags: [1u]
+        size: [cx-0.5, cy-0.5]
+        bound: false
+    keys5:
+      - type: keys
+        side: left
+        tags: [15u]
+        size: [1.5cx-0.5, cy-0.5]
+        bound: false
+pcbs:
+  pcb_tilt_v1:
+    footprints:
+      promicro:
+        type: promicro_pretty
+        anchor:
+          ref: matrix_inner_home
+          shift: [20, -7.25]
+          rotate: -90
+        params:
+          orientation: down
+      reset_button:
+          type: b3u1000p
+          nets:
+            r1: RST
+            r2: GND
+          anchor:
+            ref: matrix_inner_home
+            shift: [31,2.5]
+            rotate: -90
+      power_switch:
+          type: pcm12
+          nets:
+            from: pos
+            to: RAW
+          anchor:
+            ref: ext_thumb_only_only
+            shift: [13.5,0]
+            rotate: 90
+          params:
+            reverse: true
+      jst:
+          type: bat
+          nets: 
+            pos: pos
+            neg: GND
+          anchor:
+            ref: ext_thumb_only_only
+            shift: [-7.0,11]
